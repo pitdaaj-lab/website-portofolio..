@@ -1,0 +1,248 @@
+/* Reset & Variabel Warna Pastel */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-pastel: #f4f9fc;
+    --white: #ffffff;
+    --blue-primary: #7bbcd5;
+    --blue-light: #bce3f2;
+    --blue-dark: #4a8ca6;
+    --text-color: #44555e;
+}
+
+body {
+    background-color: var(--bg-pastel);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigasi */
+header {
+    background-color: var(--white);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--blue-dark);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--blue-dark);
+}
+
+/* Kontainer Utama */
+section {
+    padding: 60px 10%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Halaman Utama (Index) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text h2 {
+    font-size: 20px;
+    color: var(--blue-dark);
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--blue-primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--blue-dark);
+}
+
+.hero-img .avatar-box {
+    width: 300px;
+    height: 300px;
+    background-color: var(--blue-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid var(--white);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.avatar-box span {
+    font-size: 80px;
+}
+
+/* Grid Komponen (Tentang & Portofolio) */
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.about-container {
+    display: flex;
+    gap: 50px;
+}
+
+.interests, .skills-box {
+    flex: 1;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.interests h3, .skills-box h3 {
+    margin-bottom: 20px;
+    color: var(--blue-dark);
+}
+
+.interest-item {
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    margin-bottom: 15px;
+}
+
+.bar-bg {
+    background: #eef5f8;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    background: var(--blue-primary);
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Portofolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.card-img {
+    height: 180px;
+    background: var(--blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Kontak */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbe7ed;
+    border-radius: 8px;
+    background: #fbfdfe;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--blue-primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--white);
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    color: #7f8c8d;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.01);
+}
